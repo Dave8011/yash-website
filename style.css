@@ -158,3 +158,54 @@ footer {
 5. You can modularize this into multiple SCSS files (header, sections, footer).
 6. Consider accessibility improvements: contrast, focus styles.
 */
+
+
+
+
+/* ========================
+   Thank You Page Styles
+   ======================== */
+
+body.thank-you-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.thank-you {
+  text-align: center;
+  max-width: 500px;
+}
+
+.thank-you h1 {
+  font-size: 2.5em;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.thank-you p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.thank-you a {
+  display: inline-block;
+  margin-top: 30px;
+  background: #000;
+  color: #fff;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  transition: background 0.3s;
+}
+
+.thank-you a:hover {
+  background: #444;
+}
+
