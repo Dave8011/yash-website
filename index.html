@@ -1,160 +1,95 @@
-/* Base styles for the whole page */
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background: #f9f9f9;
-  color: #333;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yash Dave | Corporate Trainer & Mentalist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" /> <!-- External CSS -->
+</head>
+<body>
 
-/* Header section styling */
-header {
-  background: linear-gradient(to right, #000, #333);
-  color: #fff;
-  padding: 60px 20px;
-  text-align: center;
-  animation: fadeIn 2s ease;
-}
+<header>
+  <h1>Yash Dave</h1>
+  <p>Corporate Trainer | Mentalist</p>
+</header>
 
-header h1 {
-  font-size: 3em;
-  margin: 0;
-}
+<section>
+  <h2>About Yash</h2>
+  <p>
+    Yash Dave is a renowned mentalist and corporate speaker, known for his captivating performances and transformational training sessions.
+    Combining psychology, intuition, and entertainment, he creates immersive mentalism shows that leave audiences spellbound while subtly reinforcing valuable business insights.
+  </p>
+</section>
 
-header p {
-  font-size: 1.5em;
-  margin-top: 10px;
-}
+<section>
+  <h2>Step Zero</h2>
+  <p>
+    In life, we always hear about Step One — the first move toward any goal. But true success begins even earlier.<br>
+    <strong>Step Zero</strong> is the invisible foundation: Confidence, Mindset, and Motivation.<br>
+    Before you start anything — a career or a dream — Step Zero prepares you to succeed.
+    <br><br>
+    We redefine the corporate training and entertainment experience by blending education with entertainment. Whether you're looking to motivate your team or captivate an audience, Step Zero delivers an unforgettable experience.
+  </p>
+</section>
 
-/* General section layout */
-section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease forwards;
-}
+<section>
+  <h2>Services</h2>
+  <p>
+    <!-- Consider splitting each service into its own div for better structure and possible card-based layout in future -->
+    <h3>Motivation & Confidence-Building Seminars</h3>
+    Our seminars empower teams through engaging workshops and practical exercises to enhance communication and leadership.<br><br>
 
-/* Alternate animation delays for visual variety */
-section:nth-child(odd) {
-  animation-delay: 0.5s;
-}
+    <h3>The Mentalism Experience</h3>
+    Yash Dave delivers interactive mentalism performances involving mind-reading, predictions, and psychological entertainment. A perfect blend of inspiration and awe.
+  </p>
+</section>
 
-section:nth-child(even) {
-  animation-delay: 1s;
-}
+<section>
+  <h2>Portfolio</h2>
+  <div class="gallery">
+    <!-- Replace with real images later -->
+    <img src="https://via.placeholder.com/400x300?text=Event+1" alt="Event 1" />
+    <img src="https://via.placeholder.com/400x300?text=Event+2" alt="Event 2" />
+    <img src="https://via.placeholder.com/400x300?text=Event+3" alt="Event 3" />
+    <img src="https://via.placeholder.com/400x300?text=Event+4" alt="Event 4" />
+  </div>
+</section>
 
-section h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  text-align: center;
-}
+<section class="cta">
+  <h2>Connect with Yash</h2>
+  <!-- Optionally add other social links here -->
+  <a href="https://instagram.com/stepzero.official" target="_blank">@stepzero.official</a>
+</section>
 
-section p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  text-align: center;
-}
+<section class="brochure">
+  <h2>Download Profile Brochure</h2>
+  <!-- Ensure the brochure PDF is in the same directory or correct path -->
+  <a href="YashDave-Brochure.pdf" download>Download Brochure</a>
+</section>
 
-/* Call to action and brochure buttons */
-.cta, .brochure {
-  text-align: center;
-  margin-top: 40px;
-}
+<section>
+  <h2>Contact for Bookings</h2>
+  <div class="contact-form">
+    <!-- Replace {your_form_id} with actual Formspree form ID -->
+    <form action="https://formspree.io/f/{your_form_id}" method="POST">
+      <input type="hidden" name="_next" value="thankyou.html" />
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
 
-.cta a, .brochure a {
-  background: #000;
-  color: #fff;
-  padding: 12px 30px;
-  text-decoration: none;
-  font-size: 1.2em;
-  border-radius: 5px;
-  transition: background 0.3s;
-  display: inline-block;
-  margin: 10px;
-}
+<footer>
+  &copy; 2025 Yash Dave | All rights reserved.
+</footer>
 
-.cta a:hover, .brochure a:hover {
-  background: #444;
-}
-
-/* Gallery grid styling */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Contact form styles */
-.contact-form {
-  max-width: 600px;
-  margin: 40px auto 0;
-}
-
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1em;
-}
-
-.contact-form button {
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 12px 30px;
-  font-size: 1.1em;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
-  width: 100%;
-}
-
-.contact-form button:hover {
-  background: #444;
-}
-
-/* Footer styling */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #eee;
-  font-size: 0.9em;
-  margin-top: 40px;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* === FUTURE STYLE NOTES ===
-1. Make header background color dynamic or theme-switchable (light/dark).
-2. Add responsiveness tweaks for mobile breakpoints.
-3. Consider adding CSS variables for colors/fonts to ease theming.
-4. For large galleries, lazy loading can improve performance.
-5. You can modularize this into multiple SCSS files (header, sections, footer).
-6. Consider accessibility improvements: contrast, focus styles.
-*/
+<!-- === FUTURE HTML NOTES ===
+1. Consider replacing inline <h3> inside <p> with structured divs or cards.
+2. Add Open Graph meta tags for social media sharing.
+3. Add analytics (e.g., Google Analytics) before </body> if needed.
+4. Make sure to validate contact form URL (Formspree) or replace with backend solution.
+5. Add testimonials or client logos to boost social proof.
+6
