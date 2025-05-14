@@ -8,57 +8,30 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- External CSS -->
+  <!-- External CSS (includes thank-you-page styles) -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Optional: Page-specific styling (inline or move to CSS with a class like .thank-you) -->
-  <style>
-    body {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background: #f9f9f9;
-    }
-    .thank-you {
-      text-align: center;
-      max-width: 500px;
-    }
-    .thank-you h1 {
-      font-size: 2.5em;
-      color: #000;
-    }
-    .thank-you p {
-      font-size: 1.2em;
-      margin-top: 20px;
-    }
-    .thank-you a {
-      margin-top: 30px;
-      display: inline-block;
-      background: #000;
-      color: #fff;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 1.1em;
-      transition: background 0.3s;
-    }
-    .thank-you a:hover {
-      background: #444;
-    }
-  </style>
 </head>
-<body >
 
-  <!-- ✅ Message Section -->
+<body class="thank-you-page">
+
+  <!-- ✅ Thank You Message -->
   <div class="thank-you">
     <h1>Thank You!</h1>
     <p>Your message has been successfully sent.<br>We'll get back to you shortly!</p>
     <a href="index.html">Return to Home</a>
   </div>
 
-  <!-- ✅ Confetti Effect (optional but fun) -->
+  <!-- ✅ Confetti Animation -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   <script>
-    window.onload = ()
+    window.onload = function () {
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    };
+  </script>
+
+</body>
+</html>
