@@ -137,17 +137,23 @@
 
 <!-- ✅ Contact Form -->
 <section>
-  <h2>Contact for Bookings</h2>
+  <h2>Book a Session</h2>
   <div class="contact-form">
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="hidden" name="_next" value="thankyou.html" />
+      <select name="bookingType" required>
+        <option value="">Select Type</option>
+        <option value="intro">Intro Call</option>
+        <option value="webinar">Webinar</option>
+        <option value="team">Team Consultation</option>
+      </select>
       <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <textarea name="message" rows="5" placeholder="Tell us more..."></textarea>
+      <button type="submit">Book Now</button>
     </form>
   </div>
 </section>
+
   <!-- ✅ Urgency Message -->
 <div class="booking-urgency">📆 Currently accepting bookings for <strong>June 2025</strong></div>
 
