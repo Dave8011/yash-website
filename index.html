@@ -18,6 +18,13 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script src="quotes.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    initQuoteRotation("#homepageQuote", true);
+  });
+  </script>
+
 </head>
 <body>
 
@@ -62,7 +69,11 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Yash Dave Live" frameborder="0" allowfullscreen></iframe>
   </div>
 </section>
-
+  
+<!-- Quote section -->
+<div class="homepage-quote" id="homepageQuote"></div>
+<!-- Quote section -->
+  
 <section>
   <h2>Client Testimonials</h2>
   <blockquote>
