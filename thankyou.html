@@ -5,26 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Thank You | Yash Dave</title>
 
-  <!-- Google Fonts -->
+  <!-- ✅ Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
-  <!-- External CSS (includes thank-you-page styles) -->
+  <!-- ✅ Main Stylesheet (includes thank-you styles) -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="thank-you-page">
 
-  <!-- ✅ Thank You Message -->
+  <!-- ✅ Confirmation Message -->
   <div class="thank-you">
     <h1>Thank You!</h1>
-    <p>Your message has been successfully sent.<br>We'll get back to you shortly!</p>
-    <a href="index.html">Return to Home</a>
+    <p>Your message has been successfully sent.<br>We'll get back to you shortly.</p>
+    <a href="index.html">← Back to Home</a>
   </div>
 
   <!-- ✅ Confetti Animation -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   <script>
-    window.onload = function () {
+    window.onload = () => {
       confetti({
         particleCount: 150,
         spread: 70,
@@ -33,5 +33,10 @@
     };
   </script>
 
+  <!-- === FUTURE NOTES ===
+  1. Add email confirmation (if backend supports it).
+  2. Consider redirecting after 10s using JS.
+  3. Add subtle sound or animation for celebration.
+  -->
 </body>
 </html>
