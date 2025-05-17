@@ -255,6 +255,14 @@ cite {
   opacity: 1;
 }
 
+/* === SERVICE CARDS === */
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
 
 
 /* ========================
@@ -302,4 +310,42 @@ body.thank-you-page {
 
 .thank-you a:hover {
   background: #444;
+}
+
+
+
+/* ========================
+   Mobile View
+   ======================== */
+
+
+
+@media (min-width: 768px) {
+  .services {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.service-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  flex: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.service-card p {
+  font-size: 1em;
+  line-height: 1.6;
 }
