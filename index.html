@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- ✅ Meta setup -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Yash Dave | Corporate Trainer & Mentalist</title>
 
-  <!-- SEO & Social Sharing -->
+  <!-- ✅ SEO & Social Sharing -->
   <meta name="description" content="Yash Dave is a renowned corporate trainer and mentalist delivering powerful seminars and unforgettable performances." />
   <meta name="keywords" content="Yash Dave, Mentalist, Corporate Trainer, Motivational Speaker, Step Zero" />
   <meta name="author" content="Yash Dave" />
@@ -15,24 +16,31 @@
   <meta property="og:url" content="https://yourdomain.com" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- ✅ Favicon & Fonts -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="quotes.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    initQuoteRotation("#homepageQuote", true);
-  });
-  </script>
 
+  <!-- ✅ Main Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ Quote Rotator Script (shared across homepage & thank-you) -->
+  <script src="quotes.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      initQuoteRotation("#homepageQuote", true); // Enable animated quote rotation
+    });
+  </script>
 </head>
+
 <body>
 
+<!-- ✅ Hero Header -->
 <header>
   <h1>Yash Dave</h1>
   <p>Corporate Trainer | Mentalist</p>
 </header>
 
+<!-- ✅ About Section -->
 <section>
   <h2>About Yash</h2>
   <p>
@@ -41,6 +49,7 @@
   </p>
 </section>
 
+<!-- ✅ Concept Section: Step Zero -->
 <section>
   <h2>Step Zero</h2>
   <p>
@@ -49,6 +58,7 @@
   </p>
 </section>
 
+<!-- ✅ Services Offered -->
 <section>
   <h2>Services</h2>
   <div class="services">
@@ -63,6 +73,7 @@
   </div>
 </section>
 
+<!-- ✅ Embedded Video -->
 <section>
   <h2>Video: Yash in Action</h2>
   <div class="video-wrapper">
@@ -70,27 +81,30 @@
   </div>
 </section>
   
-<!-- Quote section -->
+<!-- ✅ Rotating Quote Section (loaded via JS) -->
 <div class="homepage-quote" id="homepageQuote"></div>
-<!-- Quote section -->
-  
+
+<!-- ✅ Testimonials -->
 <section>
   <h2>Client Testimonials</h2>
   <blockquote>
     “Yash’s session was absolutely transformative — a perfect mix of psychology and inspiration.”<br>
     <cite>- HR Manager, GlobalTech</cite>
   </blockquote>
+  <!-- 💡 Future: Replace with slider for multiple testimonials -->
 </section>
 
+<!-- ✅ Clients / Partners -->
 <section>
   <h2>Trusted By</h2>
   <div class="client-logos">
     <img src="images/logo1.png" alt="Client 1" />
     <img src="images/logo2.png" alt="Client 2" />
-    <!-- Add more as needed -->
+    <!-- 💡 Add more logos to boost trust and authority -->
   </div>
 </section>
 
+<!-- ✅ Image Portfolio / Gallery -->
 <section>
   <h2>Portfolio</h2>
   <div class="gallery">
@@ -100,18 +114,22 @@
     <img src="images/event4.jpeg" alt="Event 4" loading="lazy" />
   </div>
   <button onclick="window.location.href='more-images.html'">See More Images</button>
+  <!-- 💡 Future: Add Lightbox JS to open images in popup -->
 </section>
 
+<!-- ✅ Instagram CTA -->
 <section class="cta">
   <h2>Connect with Yash</h2>
   <a href="https://instagram.com/stepzero.official" target="_blank">@stepzero.official</a>
 </section>
 
+<!-- ✅ Brochure Download -->
 <section class="brochure">
   <h2>Download Profile Brochure</h2>
   <a href="StepZero Brochure.pdf" download>Download Brochure</a>
 </section>
 
+<!-- ✅ Contact Form -->
 <section>
   <h2>Contact for Bookings</h2>
   <div class="contact-form">
@@ -125,15 +143,20 @@
   </div>
 </section>
 
+<!-- ✅ Footer -->
 <footer>
   &copy; 2025 Yash Dave | All rights reserved.
 </footer>
 
+<!-- ✅ Dev Notes -->
 <!-- === FUTURE HTML NOTES ===
-1. Replace YOUR_FORM_ID and VIDEO_ID.
-2. Add more testimonials or carousel.
-3. Consider using Lightbox JS for gallery.
-4. Add blog.html in future for SEO content.
+1. Replace YOUR_FORM_ID and VIDEO_ID with live values.
+2. Add more testimonials or carousel slider.
+3. Consider using Lightbox JS or Swiper.js for better portfolio UX.
+4. Add blog.html in future for SEO & authority-building.
+5. Consider animations on scroll using AOS.js or GSAP.
+6. Add structured data (schema.org) for SEO if needed.
+7. Improve accessibility: ALT text, ARIA roles, labels.
 -->
 </body>
 </html>
