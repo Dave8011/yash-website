@@ -4,8 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Yash Dave | Corporate Trainer & Mentalist</title>
+
+  <!-- SEO & Social Sharing -->
+  <meta name="description" content="Yash Dave is a renowned corporate trainer and mentalist delivering powerful seminars and unforgettable performances." />
+  <meta name="keywords" content="Yash Dave, Mentalist, Corporate Trainer, Motivational Speaker, Step Zero" />
+  <meta name="author" content="Yash Dave" />
+  <meta property="og:title" content="Yash Dave | Corporate Trainer & Mentalist" />
+  <meta property="og:description" content="Corporate training meets mentalism. Empowering minds, engaging hearts." />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" /> <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -17,65 +29,82 @@
 <section>
   <h2>About Yash</h2>
   <p>
-    Yash Dave is a renowned mentalist and corporate speaker, known for his captivating performances and transformational training sessions.
-    Combining psychology, intuition, and entertainment, he creates immersive mentalism shows that leave audiences spellbound while subtly reinforcing valuable business insights.
+    Yash Dave is a renowned mentalist and corporate speaker, known for captivating performances and transformational training sessions.
+    He combines psychology, intuition, and entertainment to deliver immersive experiences that reinforce deep business insights.
   </p>
 </section>
 
 <section>
   <h2>Step Zero</h2>
   <p>
-    In life, we always hear about Step One — the first move toward any goal. But true success begins even earlier.<br>
-    <strong>Step Zero</strong> is the invisible foundation: Confidence, Mindset, and Motivation.<br>
-    Before you start anything — a career or a dream — Step Zero prepares you to succeed.
-    <br><br>
-    We redefine the corporate training and entertainment experience by blending education with entertainment. Whether you're looking to motivate your team or captivate an audience, Step Zero delivers an unforgettable experience.
+    <strong>Step Zero</strong> is the foundation of success—Confidence, Mindset, and Motivation. Before Step One begins, Step Zero prepares you to succeed.<br><br>
+    We redefine corporate training and entertainment by blending education with engagement. Whether motivating teams or captivating audiences, Step Zero is unforgettable.
   </p>
 </section>
 
 <section>
   <h2>Services</h2>
-  <p>
-    <!-- Consider splitting each service into its own div for better structure and possible card-based layout in future -->
-    <h3>Motivation & Confidence-Building Seminars</h3>
-    Our seminars empower teams through engaging workshops and practical exercises to enhance communication and leadership.<br><br>
+  <div class="services">
+    <div class="service-card">
+      <h3>Motivation & Confidence-Building Seminars</h3>
+      <p>Engaging workshops with practical takeaways to boost leadership, communication, and team morale.</p>
+    </div>
+    <div class="service-card">
+      <h3>The Mentalism Experience</h3>
+      <p>Interactive mind-reading, predictions, and psychological entertainment—blending inspiration with awe.</p>
+    </div>
+  </div>
+</section>
 
-    <h3>The Mentalism Experience</h3>
-    Yash Dave delivers interactive mentalism performances involving mind-reading, predictions, and psychological entertainment. A perfect blend of inspiration and awe.
-  </p>
+<section>
+  <h2>Video: Yash in Action</h2>
+  <div class="video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Yash Dave Live" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section>
+  <h2>Client Testimonials</h2>
+  <blockquote>
+    “Yash’s session was absolutely transformative — a perfect mix of psychology and inspiration.”<br>
+    <cite>- HR Manager, GlobalTech</cite>
+  </blockquote>
+</section>
+
+<section>
+  <h2>Trusted By</h2>
+  <div class="client-logos">
+    <img src="images/logo1.png" alt="Client 1" />
+    <img src="images/logo2.png" alt="Client 2" />
+    <!-- Add more as needed -->
+  </div>
 </section>
 
 <section>
   <h2>Portfolio</h2>
   <div class="gallery">
-    <!-- Update the src attribute to point to the images folder -->
-    <img src="images/event1.jpeg" alt="Event 1" />
-    <img src="images/event2.jpeg" alt="Event 2" />
-    <img src="images/event3.jpeg" alt="Event 3" />
-    <img src="images/event4.jpeg" alt="Event 4" />
+    <img src="images/event1.jpeg" alt="Event 1" loading="lazy" />
+    <img src="images/event2.jpeg" alt="Event 2" loading="lazy" />
+    <img src="images/event3.jpeg" alt="Event 3" loading="lazy" />
+    <img src="images/event4.jpeg" alt="Event 4" loading="lazy" />
   </div>
-  <!-- Button For More IMG Page -->
   <button onclick="window.location.href='more-images.html'">See More Images</button>
 </section>
 
-
 <section class="cta">
   <h2>Connect with Yash</h2>
-  <!-- Optionally add other social links here -->
   <a href="https://instagram.com/stepzero.official" target="_blank">@stepzero.official</a>
 </section>
 
 <section class="brochure">
   <h2>Download Profile Brochure</h2>
-  <!-- Ensure the brochure PDF is in the same directory or correct path -->
   <a href="StepZero Brochure.pdf" download>Download Brochure</a>
 </section>
 
 <section>
   <h2>Contact for Bookings</h2>
   <div class="contact-form">
-    <!-- Replace {your_form_id} with actual Formspree form ID -->
-    <form action="https://formspree.io/f/{your_form_id}" method="POST">
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <input type="hidden" name="_next" value="thankyou.html" />
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="_replyto" placeholder="Your Email" required />
@@ -90,12 +119,10 @@
 </footer>
 
 <!-- === FUTURE HTML NOTES ===
-1. Consider replacing inline <h3> inside <p> with structured divs or cards.
-2. Add Open Graph meta tags for social media sharing.
-3. Add analytics (e.g., Google Analytics) before </body> if needed.
-4. Make sure to validate contact form URL (Formspree) or replace with backend solution.
-5. Add testimonials or client logos to boost social proof.
-6. Add favicon and SEO metadata in <head>.
+1. Replace YOUR_FORM_ID and VIDEO_ID.
+2. Add more testimonials or carousel.
+3. Consider using Lightbox JS for gallery.
+4. Add blog.html in future for SEO content.
 -->
 </body>
 </html>
