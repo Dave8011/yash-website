@@ -1,13 +1,18 @@
-/* Base styles for the whole page */
+/* === Base Styles === */
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Quicksand', sans-serif; /* Updated font */
   background: #f9f9f9;
   color: #333;
   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-/* Header section styling */
+/* Apply Gloock font to headings */
+h1, h2, h3, h4 {
+  font-family: 'Gloock', serif;
+}
+
+/* === Header === */
 header {
   background: linear-gradient(to right, #000, #333);
   color: #fff;
@@ -26,7 +31,7 @@ header p {
   margin-top: 10px;
 }
 
-/* General section layout */
+/* === Section Layout === */
 section {
   padding: 60px 20px;
   max-width: 1000px;
@@ -36,14 +41,9 @@ section {
   animation: fadeUp 1s ease forwards;
 }
 
-/* Alternate animation delays for visual variety */
-section:nth-child(odd) {
-  animation-delay: 0.5s;
-}
-
-section:nth-child(even) {
-  animation-delay: 1s;
-}
+/* Animation delays */
+section:nth-child(odd) { animation-delay: 0.5s; }
+section:nth-child(even) { animation-delay: 1s; }
 
 section h2 {
   font-size: 2em;
@@ -57,7 +57,7 @@ section p {
   text-align: left;
 }
 
-/* Call to action and brochure buttons */
+/* === Buttons (Call to Action / Brochure) === */
 .cta, .brochure {
   text-align: center;
   margin-top: 40px;
@@ -70,16 +70,18 @@ section p {
   text-decoration: none;
   font-size: 1.2em;
   border-radius: 5px;
-  transition: background 0.3s;
   display: inline-block;
   margin: 10px;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
 }
 
 .cta a:hover, .brochure a:hover {
   background: #444;
+  transform: scale(1.05);
 }
 
-/* Gallery grid styling */
+/* === Gallery Grid === */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -92,15 +94,15 @@ section p {
   height: 295px;
   object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.3s;
+  transition: transform 0.4s ease, box-shadow 0.3s;
 }
 
 .gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Button For More IMG Page */
-
+/* === Button (Generic) === */
 button {
   background-color: #007bff;
   border: none;
@@ -110,23 +112,23 @@ button {
   font-size: 16px;
   margin-top: 15px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
 }
 
 button:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
 }
 
-
-
-
-/* Contact form styles */
+/* === Contact Form === */
 .contact-form {
   max-width: 600px;
   margin: 40px auto 0;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
@@ -143,15 +145,17 @@ button:hover {
   font-size: 1.1em;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
   width: 100%;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
 }
 
 .contact-form button:hover {
   background: #444;
+  transform: scale(1.05);
 }
 
-/* Footer styling */
+/* === Footer === */
 footer {
   text-align: center;
   padding: 20px;
@@ -160,8 +164,7 @@ footer {
   margin-top: 40px;
 }
 
-/* ==== Quote section  ==== */
-
+/* === Quote Section with Animation === */
 .homepage-quote {
   font-size: 1.6rem;
   text-align: center;
@@ -169,78 +172,67 @@ footer {
   color: #444;
   font-style: italic;
   min-height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
 }
 
-.fade-in {
-  animation: fadeIn 1s ease-in-out;
+.quote-icon {
+  font-size: 1.8rem;
+  animation: floatIcon 2s ease-in-out infinite;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes floatIcon {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
 }
 
-/* ==== Quote section end  ==== */
-
-
-/* Animations */
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* === FUTURE STYLE NOTES ===
-1. Make header background color dynamic or theme-switchable (light/dark).
-2. Add responsiveness tweaks for mobile breakpoints.
-3. Consider adding CSS variables for colors/fonts to ease theming.
-4. For large galleries, lazy loading can improve performance.
-5. You can modularize this into multiple SCSS files (header, sections, footer).
-6. Consider accessibility improvements: contrast, focus styles.
-*/
-
-/* ==== Service Card Styling ==== */
+/* === Service Cards === */
 .services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .services {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .service-card {
   background: #fff;
-  padding: 25px;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: transform 0.3s;
+  flex: 1;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
 }
 
-/* ==== Video Embed Wrapper ==== */
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
+.service-card:nth-child(1) { animation-delay: 0.3s; }
+.service-card:nth-child(2) { animation-delay: 0.6s; }
+
+.service-card h3 {
+  margin-top: 0;
+  font-size: 1.5em;
 }
 
-.video-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+.service-card p {
+  font-size: 1em;
+  line-height: 1.6;
 }
 
-/* ==== Testimonials ==== */
+/* === Testimonials === */
 blockquote {
   font-style: italic;
   font-size: 1.2em;
@@ -259,7 +251,7 @@ cite {
   font-weight: bold;
 }
 
-/* ==== Client Logos ==== */
+/* === Client Logos === */
 .client-logos {
   display: flex;
   justify-content: center;
@@ -278,20 +270,25 @@ cite {
   opacity: 1;
 }
 
-/* === SERVICE CARDS === */
-.services {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+/* === Video Embed === */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
 }
 
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
 
-
-
-/* ========================
-   Thank You Page Styles
-   ======================== */
-
+/* === Thank You Page === */
 body.thank-you-page {
   height: 100vh;
   display: flex;
@@ -299,7 +296,7 @@ body.thank-you-page {
   justify-content: center;
   padding: 20px;
   background: #f9f9f9;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   color: #333;
 }
 
@@ -328,47 +325,64 @@ body.thank-you-page {
   text-decoration: none;
   border-radius: 6px;
   font-size: 1.1em;
-  transition: background 0.3s;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
 }
 
 .thank-you a:hover {
   background: #444;
+  transform: scale(1.05);
 }
 
-
-
-/* ========================
-   Mobile View
-   ======================== */
-
-
-
-@media (min-width: 768px) {
-  .services {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+/* === Floating Bottom Bar === */
+.floating-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
 }
 
-.service-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-  flex: 1;
+.floating-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #007bff;
+  border-radius: 30px;
+  transition: background 0.3s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
+.floating-bar a:hover {
+  background: #0056b3;
 }
 
-.service-card h3 {
-  margin-top: 0;
-  font-size: 1.5em;
+/* === Urgency Callout === */
+.booking-urgency {
+  text-align: center;
+  font-size: 1.2rem;
+  background: #fff3cd;
+  color: #856404;
+  padding: 15px;
+  border: 1px solid #ffeeba;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 8px;
 }
 
-.service-card p {
-  font-size: 1em;
-  line-height: 1.6;
+/* === Animations === */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
